@@ -24,8 +24,10 @@
   </table>
 
   <div>I'm a div</div>
-  <form novalidate class="input-form">
-    <input type="text"></input>
+  <div ng-controller="ExampleController">
+    <form novalidate class="simple-form">
+      Name: <input type="text" ng-model="user.name" /><br />
+
   </form>
 
 </div>
