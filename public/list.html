@@ -27,9 +27,8 @@
 
     <form novalidate class="simple-form">
       Name: <input type="text" ng-model="user.name" /><br />
-      E-mail: <input type="email" ng-model="user.email" /><br />
       <input type="submit" ng-click="update(user)" value="Save" />
     </form>
-    <pre>master = {{master | json}}</pre>
+    <pre>master = {master | json}</pre>
   </div>
 </div>
