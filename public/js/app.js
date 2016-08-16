@@ -115,16 +115,16 @@ angular.module("contactsApp", ['ngRoute'])
         }
     })
 
-      .controller('ExampleController', ['$scope', function($scope) {
-        $scope.master = {};
+    .controller('ExampleController', ['$scope', function($scope) {
+      $scope.master = {};
 
-        $scope.update = function(user) {
-          $scope.master = angular.copy(user);
-        };
+      $scope.update = function(user) {
+        $scope.master = angular.copy(user);
+      };
 
-        $scope.reset = function() {
-          $scope.user = angular.copy($scope.master);
-        };
+      $scope.reset = function() {
+        $scope.user = angular.copy($scope.master);
+      };
 
-        $scope.reset();
-      }]);
+      $scope.reset();
+    }]);
