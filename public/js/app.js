@@ -119,6 +119,7 @@ angular.module("contactsApp", ['ngRoute'])
       $scope.master = {};
 
       $scope.update = function(user) {
+        console.log("Update pressed");
         $scope.master = user;
       };
 
