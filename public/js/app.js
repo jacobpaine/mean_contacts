@@ -119,7 +119,7 @@ angular.module("contactsApp", ['ngRoute'])
       $scope.master = {};
 
       $scope.update = function(user) {
-        $scope.master = angular.copy(user);
+        $scope.master = user;
       };
 
       $scope.reset = function() {
