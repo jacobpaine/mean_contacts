@@ -115,7 +115,6 @@ angular.module("contactsApp", ['ngRoute'])
         }
     });
 
-    angular.module('formExample', [])
       .controller('ExampleController', ['$scope', function($scope) {
         $scope.master = {};
 
@@ -123,7 +122,7 @@ angular.module("contactsApp", ['ngRoute'])
           $scope.master = angular.copy(user);
         };
 
-        $scope.reset = function() {
+        $scope.reset = function() { 
           $scope.user = angular.copy($scope.master);
         };
 
