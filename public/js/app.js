@@ -113,7 +113,7 @@ angular.module("contactsApp", ['ngRoute'])
         $scope.deleteContact = function(contactId) {
             Contacts.deleteContact(contactId);
         }
-    });
+    })
 
       .controller('ExampleController', ['$scope', function($scope) {
         $scope.master = {};
@@ -122,7 +122,7 @@ angular.module("contactsApp", ['ngRoute'])
           $scope.master = angular.copy(user);
         };
 
-        $scope.reset = function() { 
+        $scope.reset = function() {
           $scope.user = angular.copy($scope.master);
         };
 
