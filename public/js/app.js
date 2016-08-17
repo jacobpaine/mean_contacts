@@ -115,7 +115,7 @@ angular.module("contactsApp", ['ngRoute'])
         }
     })
 
-    .controller('ExampleController', ['$', function($scope, $routeParams, Contacts) {
+    .controller('ExampleController', function($scope, $routeParams, Contacts) {
 
       Contacts.getContact($routeParams.contactId).then(function(doc) {
           $scope.contact = doc.data;
@@ -140,4 +140,4 @@ angular.module("contactsApp", ['ngRoute'])
       };
 
       $scope.reset();
-    }]);
+    });
