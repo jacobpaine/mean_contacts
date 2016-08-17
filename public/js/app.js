@@ -122,6 +122,12 @@ angular.module("contactsApp", ['ngRoute'])
         $scope.master = angular.copy(user);
       };
 
+      $scope.saveContact = function(contact) {
+          Contacts.editContact(contact);
+          $scope.editMode = false;
+          $scope.contactFormUrl = "";
+      }
+
       $scope.reset = function() {
         $scope.user = angular.copy($scope.master);
       };
