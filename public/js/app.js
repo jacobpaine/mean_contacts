@@ -114,9 +114,7 @@ angular.module("contactsApp", ['ngRoute'])
             Contacts.deleteContact(contactId);
         }
     })
-
-    .controller('ExampleController', function($scope, $routeParams, Contacts) {
-
+    .controller("ExampleController", function($scope, $routeParams, Contacts) {
       Contacts.getContact($routeParams.contactId).then(function(doc) {
           $scope.contact = doc.data;
       }, function(response) {
