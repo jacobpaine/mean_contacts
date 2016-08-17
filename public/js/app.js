@@ -115,7 +115,14 @@ angular.module("contactsApp", ['ngRoute'])
         }
     })
 
-    .controller('ExampleController', ['$scope', function($scope) {
+    .controller('ExampleController', ['$scope', function($scope, routeParams, Contacts) {
+
+      Contacts.getContact($routeParams.contactId).then(function(doc) {
+          $scope.contact = doc.data;
+      }, function(response) {
+          alert(response);
+      });
+
       $scope.master = {};
 
       $scope.update = function(user) {
