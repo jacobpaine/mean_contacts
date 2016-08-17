@@ -116,6 +116,7 @@ angular.module("contactsApp", ['ngRoute'])
     // })
     .controller("ExampleController", function($scope, $routeParams, Contacts) {
       Contacts.getContact($routeParams.contactId).then(function(doc) {
+        console.log("I am here");
           $scope.contact = doc.data;
       }, function(response) {
           alert(response);
